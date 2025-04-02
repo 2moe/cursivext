@@ -9,7 +9,7 @@
 
 ### Checkbox
 
-![checkbox](../assets/checkbox.png)
+<img src="../assets/checkbox.png" width="40%" alt="checkbox">
 
 ```rust
 use cursivext::{cursive, views::Checkbox};
