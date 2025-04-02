@@ -15,7 +15,7 @@ exclude = [
     # "/.gitignore",
 ]
 keywords = ["crossterm", "TUI", "UI", "user-interface"]
-categories = ["command-line-interface", "gui"]
+categories = ["command-line-interface"]
 repository = "https://github.com/2moe/cursivext"
 description = "Some useful extensions for Cursive TUI."
 
