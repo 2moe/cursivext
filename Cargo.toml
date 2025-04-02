@@ -29,7 +29,7 @@ cursive = { version = "0.21", default-features = false, features = [
 ] }
 cursive-tabs = { version = "0.8.0", optional = true }
 log = "0.4"
-tap = "1.0"
+# tap = "1.0"
 
 [package.metadata.docs.rs]
 all-features = true

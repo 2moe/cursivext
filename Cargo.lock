@@ -238,7 +238,6 @@ dependencies = [
  "cursive",
  "cursive-tabs",
  "log",
- "tap",
  "testutils",
 ]
 
