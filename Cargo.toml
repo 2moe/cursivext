@@ -1,0 +1,43 @@
+[package]
+name = "cursivext"
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.85"
+license = "Apache-2.0"
+authors = ["Moe <m@tmoe.me>"]
+readme = "docs/Readme.md"
+exclude = [
+    "/rust-toolchain.toml",
+    "/.github/",
+    "/assets",
+    # "/examples/",
+    # "/tests/",
+    # "/.gitignore",
+]
+keywords = ["crossterm", "TUI", "UI", "Text-based-user-interface"]
+categories = ["command-line-interface", "gui"]
+repository = "https://github.com/2moe/cursivext"
+description = "Some useful extensions for Cursive TUI."
+
+[features]
+ansi = ["cursive/ansi"]
+cursive-tabs = ["dep:cursive-tabs"]
+
+[dependencies]
+cursive = { version = "0.21", default-features = false, features = [
+    "crossterm-backend",
+] }
+cursive-tabs = { version = "0.8.0", optional = true }
+log = "0.4"
+tap = "1.0"
+
+[package.metadata.docs.rs]
+all-features = true
+# targets = ["x86_64-unknown-linux-gnu"]
+rustdoc-args = ["--cfg", "__unstable_doc"]
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(__unstable_doc)'] }
+
+[dev-dependencies]
+testutils = "0.0.5"
